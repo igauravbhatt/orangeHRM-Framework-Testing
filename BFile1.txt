@@ -1,1 +1,26 @@
-Todays Date is 3rd MAy 2025 and day is Sat
+import java.util.Scanner;
+
+public class AddThreeDigitNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input first 3-digit number
+        System.out.print("Enter the first 3-digit number: ");
+        int num1 = scanner.nextInt();
+
+        // Input second 3-digit number
+        System.out.print("Enter the second 3-digit number: ");
+        int num2 = scanner.nextInt();
+
+        // Validate input
+        if ((num1 >= 100 && num1 <= 999) && (num2 >= 100 && num2 <= 999)) {
+            // Calculate sum
+            int sum = num1 + num2;
+            System.out.println("The sum of the two numbers is: " + sum);
+        } else {
+            System.out.println("Please enter valid 3-digit numbers.");
+        }
+
+        scanner.close();
+    }
+}
